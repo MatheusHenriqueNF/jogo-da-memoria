@@ -1,0 +1,77 @@
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px 50px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #bb0b0b;
+    font-size: 1.2em;
+    width: 60%;
+   
+    padding: 30px;
+    margin: 0 auto; /* This will center the header horizontally */
+    border-radius: 5px;
+  }
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 15px;
+    width: 60%;
+   
+    margin: 0 auto;
+    margin: 0 auto;
+}
+
+/*criando design das cartaas e fazendo animação enquanto ela vira*/
+.cartas{
+    aspect-ratio: 3/4;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    transition: all 400ms ease; /*transição tempo e tipo*/
+    transform-style: preserve-3d;
+}
+
+/*criando uma class geral para a formatação comum 
+pegar tanto na frente quanto no verso*/
+.face{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #bb0b0b;
+    border-radius: 5px;
+    transition: all 400ms ease;
+}
+
+/*rotação da div para que a imagem fique do lado certo*/
+.frente{
+    transform: rotateY(180deg);
+   
+}
+
+/*deixando o verso invisivel para poder ver a imagem*/
+.verso{
+    background-image: url('../img/capa.png');
+    backface-visibility: hidden;
+}
+
+.review-carta{
+    transform: rotateY(180deg); 
+}
+
+.disabled-carta{
+    filter: saturate(0);
+    opacity: 0.5;
+}

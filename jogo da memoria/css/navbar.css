@@ -1,0 +1,15 @@
+body{
+    background-color: #211940;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+ul {
+    width: 100vw;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+  }
+.logo{
+    height: 100px;
+}
